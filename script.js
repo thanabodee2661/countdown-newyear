@@ -172,13 +172,13 @@ displaycounter = () => {
                 <span class="countdown font-mono text-5xl">
                     <span id="min"></span>
                 </span>
-                min
+                mins
             </div>
             <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content max-h-24">
                 <span class="countdown font-mono text-5xl">
                     <span id="sec"></span>
                 </span>
-                sec
+                secs
             </div>
         </div>
     </div>
