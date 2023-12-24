@@ -1,0 +1,2 @@
+#DaisyUI
+#Tailwind CSS
