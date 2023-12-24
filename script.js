@@ -210,4 +210,10 @@ selectedMode = () => {
     }
 }
 
+initTitle = () => {
+    let nowDate = new Date()
+    document.title = `Countdown | New Year ${nowDate.getFullYear() + 1}`;
+}
+
+initTitle();
 selectedMode();
