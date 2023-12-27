@@ -70,7 +70,8 @@ counter = () => {
     // hrElement.style.setProperty('--value', 0);
     // dayElement.style.setProperty('--value', 0);
 
-    setTimeout(() => countInterval = setInterval(countDown, 1000), milli);
+    // setTimeout(() => countInterval = setInterval(countDown, 1000), milli);
+    countInterval = setInterval(countDown, 1000);
 }
 
 newYear = () => {
