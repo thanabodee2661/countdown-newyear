@@ -70,8 +70,8 @@ counter = () => {
     // hrElement.style.setProperty('--value', 0);
     // dayElement.style.setProperty('--value', 0);
 
-    // setTimeout(() => countInterval = setInterval(countDown, 1000), milli);
-    countInterval = setInterval(countDown, 1000);
+    setTimeout(() => countInterval = setInterval(countDown, 1000), milli);
+    // countInterval = setInterval(countDown, 1000);
 }
 
 newYear = () => {
@@ -155,7 +155,12 @@ displaycounter = () => {
     // counterElement.innerHTML = '';
     counterElement.innerHTML =
     `
-    <div class="flex justify-center content-center min-h-screen">
+    <div class="flex flex-col justify-center content-center min-h-screen">
+        <div class="flex flex-row flex-wrap gap-4 text-center justify-center content-center text-5xl p-6 -mt-14">
+            <div>Countdown</div>
+            <div>to</div> 
+            <div>New Year</div>
+        </div>
         <div class="grid grid-flow-col gap-5 text-center auto-cols-max justify-center content-center">
             <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content max-h-24">
                 <span class="countdown font-mono text-5xl">
