@@ -221,5 +221,11 @@ initTitle = () => {
     document.title = `Countdown | New Year ${nowDate.getFullYear() + 1}`;
 }
 
+document.addEventListener( 'visibilitychange' , function() {
+    if (!document.hidden) {
+        selectedMode();
+    }
+}, false );
+
 initTitle();
 selectedMode();
