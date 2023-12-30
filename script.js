@@ -223,7 +223,7 @@ initTitle = () => {
 
 document.addEventListener( 'visibilitychange' , function() {
     if (!document.hidden) {
-        countInterval(countInterval);
+        clearInterval(countInterval);
         selectedMode();
     }
 }, false );
