@@ -154,7 +154,7 @@ displaycounter = () => {
     let counterElement = document.querySelector('#counter');
     // counterElement.innerHTML = '';
     counterElement.innerHTML =
-    `
+        `
     <div class="flex flex-col justify-center content-center min-h-screen">
         <div class="flex flex-row flex-wrap gap-4 text-center justify-center content-center text-5xl p-6 -mt-14">
             <div>Countdown</div>
@@ -163,7 +163,7 @@ displaycounter = () => {
         </div>
         <div class="grid grid-flow-col gap-5 text-center auto-cols-max justify-center content-center">
             <div class="flex flex-col p-2 bg-neutral rounded-box text-neutral-content max-h-24">
-                <span class="countdown font-mono text-5xl">
+                <span class="countdown countdown-days font-mono text-5xl">
                     <span id="days"></span>
                 </span>
                 days
@@ -189,13 +189,16 @@ displaycounter = () => {
         </div>
     </div>
     `;
+
+    // for generate days content
+    // initDaysContent();
 }
 
 displayNewYear = () => {
     let date = new Date();
     let newyearElement = document.querySelector('#newyear');
     newyearElement.innerHTML =
-    `
+        `
     <div class="fireworks relative min-h-screen z-1"></div>
     <div class="flex absolute bottom-0 left-0 right-0 top-0 text-center justify-center items-center animate-bounce z-2">
         <h1 class="text-6xl">HAPPY NEW YEAR<br>${date.getFullYear()}</h1>
@@ -221,12 +224,49 @@ initTitle = () => {
     document.title = `Countdown | New Year ${nowDate.getFullYear() + 1}`;
 }
 
-document.addEventListener( 'visibilitychange' , function() {
+// initDaysContent = () => {
+//     function daysInMonth(month, year) {
+//         return new Date(year, month, 0).getDate();
+//     }
+
+//     function daysInYear(year) {
+//         var days = 0;
+
+//         for (var month = 1; month <= 12; month++) {
+//             days = days + daysInMonth(month, year);
+//         }
+
+//         return days;
+//     }
+
+//     function pad(d) {
+//         if (d < 100) {
+//             return String("0" + d).slice(-3) + '\\A';
+//         } else {
+//             return String("00" + d).slice(-3) + '\\A';
+//         }
+//     }
+
+//     var now = new Date();
+//     var totalDate = daysInYear(now.getFullYear());
+//     var content = '';
+//     for(let i = 0; i < totalDate; i++) {
+//         content += pad(i);
+
+//         if (i + 1 < totalDate) {
+//             content += ' ';
+//         }
+//     }
+    
+//     console.log(content);
+// }
+
+document.addEventListener('visibilitychange', function () {
     if (!document.hidden) {
         clearInterval(countInterval);
         selectedMode();
     }
-}, false );
+}, false);
 
 initTitle();
 selectedMode();
